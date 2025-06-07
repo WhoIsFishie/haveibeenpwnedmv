@@ -135,7 +135,7 @@ export const breachData: BreachData[] = [
     dataTypes: [
       "User IDs",
       "Names",
-      "Mobile numbers",
+      "Mobile numbers", 
       "Email addresses",
       "Date of birth",
       "Gender",
