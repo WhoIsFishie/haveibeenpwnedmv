@@ -76,7 +76,7 @@ export const breachData: BreachData[] = [
       "Date of birth",
       "National ID numbers",
     ],
-    description: "A data exposure vulnerability revealed comprehensive customer records including personal identification details, contact information, and partial card numbers. The vulnerability was remediated within 24 hours of responsible disclosure, though the duration of initial exposure remains undetermined."    
+    description: "A data exposure vulnerability revealed comprehensive customer records including personal identification details, contact information, and partial card numbers. The vulnerability was remediated within 24 hours of responsible disclosure, though the duration of initial exposure remains undetermined.",
     severity: Severity.CRITICAL,
   },
   {
