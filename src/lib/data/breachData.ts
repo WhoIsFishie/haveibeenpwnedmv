@@ -3,7 +3,7 @@ import { Affected, BreachData, Severity } from "../types";
 export const breachData: BreachData[] = [
   {
     id: "avas-food",
-    logo: "/logos/avasfood.jpg",
+    logo: "/haveibeenpwnedmv/logos/avasfood.jpg",
     service: "AvasFood",
     category: "Food Delivery",
     discoveredDate: "launch",
@@ -23,7 +23,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "foodies-app",
-    logo: "/logos/foodies.jpg",
+    logo: "/haveibeenpwnedmv/logos/foodies.jpg",
     service: "Foodies",
     category: "Food Delivery",
     discoveredDate: null,
@@ -37,7 +37,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "pension-system",
-    logo: "/logos/pension.png",
+    logo: "/haveibeenpwnedmv/logos/pension.png",
     service: "Pension",
     category: "Government",
     discoveredDate: null,
@@ -61,7 +61,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "rtl-data-leak",
-    logo: "/logos/rtl.png",
+    logo: "/haveibeenpwnedmv/logos/rtl.png",
     service: "RTL",
     category: "Government",
     discoveredDate: null,
@@ -82,7 +82,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "amana-takaful",
-    logo: "/logos/amana_takaful.jpg",
+    logo: "/haveibeenpwnedmv/logos/amana_takaful.jpg",
     service: "Amana Takaful",
     category: "Finance",
     discoveredDate: null,
@@ -101,7 +101,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "fikuregge-dhirun",
-    logo: "/logos/fikuregge_dhirun.png",
+    logo: "/haveibeenpwnedmv/logos/fikuregge_dhirun.png",
     service: "Fikuregge Dhirun",
     category: "Government",
     discoveredDate: null,
@@ -126,7 +126,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "purple-lane",
-    logo: "/logos/purplelane.jpg",
+    logo: "/haveibeenpwnedmv/logos/purplelane.jpg",
     service: "Purple Lane",
     category: "Finance",
     discoveredDate: null,
@@ -152,7 +152,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "maldives-customs",
-    logo: "/logos/customs.jpg",
+    logo: "/haveibeenpwnedmv/logos/customs.jpg",
     service: "Maldives Customs",
     category: "Government",
     discoveredDate: "2025",
@@ -170,7 +170,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "ooredoo-edir",
-    logo: "/logos/ooredoo.jpg",
+    logo: "/haveibeenpwnedmv/logos/ooredoo.jpg",
     service: "Ooredoo",
     category: "Phone Service Provider",
     discoveredDate: "ongoing",
@@ -184,7 +184,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "dhiraagu-edir",
-    logo: "/logos/dhiraagu.jpg",
+    logo: "/haveibeenpwnedmv/logos/dhiraagu.jpg",
     service: "Dhiraagu",
     category: "Phone Service Provider",
     discoveredDate: "ongoing",
@@ -198,7 +198,7 @@ export const breachData: BreachData[] = [
   },
   {
     id: "media-net",
-    logo: "/logos/medianet.png",
+    logo: "/haveibeenpwnedmv/logos/medianet.png",
     service: "MediaNet",
     category: "Entertainment",
     discoveredDate: null,
