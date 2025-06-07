@@ -1,36 +1,86 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Have I Been Pwned MV
+
+This lightweight, browser-based tool helps users in the Maldives understand whether platforms they rely on have had known bugs and when those bugs were patched.
+
+## Features
+
+- Clean, responsive interface for breach checking
+- Comprehensive breach database with detailed information
+- Fast search and filtering capabilities
+- Mobile-friendly design
+- Static site generation for optimal performance
+
+## Tech Stack
+
+- **Next.js 15** - React framework with static export
+- **TypeScript** - Type-safe development
+- **Tailwind CSS** - Utility-first styling
+- **GitHub Pages** - Static hosting
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+- Node.js 18 or higher
+- npm, yarn, pnpm, or bun
+
+## Data Management
+
+All breach data is stored in the `breachData.ts` file. This file contains comprehensive information about various data breaches including:
+
+- Breach names and descriptions
+- Affected user counts
+- Breach dates
+- Company logos and details
+- Data types compromised
+
+### Updating Breach Information
+
+We welcome contributions to keep the breach database current and accurate. You can help by:
+
+1. **Submit a Pull Request**: Fork the repository, update the `breachData.ts` file with new or corrected information, and submit a PR
+2. **Contact via Telegram**: Reach out to [@whoisfishie](https://t.me/whoisfishie) with breach updates or corrections
+
+### Contributing Guidelines
+
+When updating breach data, please ensure:
+
+- Information is accurate and from reliable sources
+- Follow the existing data structure in `breachData.ts`
+- Include all relevant breach details
+- Verify logos and company information
+- Test locally before submitting
+
+## Project Structure
+
+```
+├── src/
+│   ├── app/                 # Next.js app directory
+│   ├── components/          # React components
+│   ├── lib/                 # Utilities and context
+│   └── data/
+│       └── breachData.ts    # Main breach database
+├── public/
+│   └── logos/              # Company logos and assets
+├── .github/
+│   └── workflows/          # GitHub Actions for deployment
+└── next.config.js          # Next.js configuration
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Contact
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+For questions, suggestions, or breach data updates:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Telegram**: [@whoisfishie](https://t.me/whoisfishie)
+- **GitHub Issues**: Open an issue for bugs or feature requests
+- **Pull Requests**: Contribute directly to improve the project
 
-## Learn More
+## License
 
-To learn more about Next.js, take a look at the following resources:
+This project is open source and available under the [MIT License](LICENSE).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Acknowledgments
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Inspired by Troy Hunt's [Have I Been Pwned](https://haveibeenpwned.com/) service
+- Built with modern web technologies for optimal performance
+- Community-driven breach database maintenance
