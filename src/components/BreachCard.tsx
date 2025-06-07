@@ -30,6 +30,7 @@ export function BreachCard({ breach }: BreachCardProps) {
         backgroundPosition: "center",
         backgroundBlendMode: "multiply",
         backgroundColor: "rgba(0, 0, 0, 0.88)",
+        backgroundRepeat: "no-repeat",
       }}
     >
       <div className="absolute top-0 right-0 flex">
@@ -103,7 +104,7 @@ export function BreachCard({ breach }: BreachCardProps) {
             </p>
           )}
           <div>
-            <p className="font-semibold mb-2">Data Types:</p>
+            {/* <p className="font-semibold mb-2">Data Types:</p> */}
             <div className="flex flex-wrap gap-2">
               {breach.dataTypes.map((type, index) => (
                 <Badge 
