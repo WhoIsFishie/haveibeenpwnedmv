@@ -121,7 +121,7 @@ export const breachData: BreachData[] = [
       "Block numbers",
     ],
     description:
-      "Political party digital registration platform exposed comprehensive national identity database containing personal details of virtually all adult Maldivian citizens. The vulnerability revealed complete residential addresses, demographic information, and official government identification data. Site was permanently taken offline in 2024, but the scope of exposure encompassed the entire eligible voting population of the Maldives.",
+      "MDP digital registration platform exposed comprehensive national identity database containing personal details of virtually all adult Maldivian citizens. The vulnerability revealed complete residential addresses, demographic information, and official government identification data. Site was permanently taken offline in 2024, but the scope of exposure encompassed the entire eligible voting population of the Maldives.",
     severity: Severity.CRITICAL,
   },
   {
@@ -131,7 +131,7 @@ export const breachData: BreachData[] = [
     category: "Finance",
     discoveredDate: null,
     patchedDate: "2023",
-    affectedUsers: Affected.EVERYONE,
+    affectedUsers: Affected.ALL_REGISTERED,
     questions: ["Have you registered for the loyalty program in Family Room, AST, Coffee Shrub, Seahouse, Broista, or any other Purple Lane registered business?"],
     dataTypes: [
       "User IDs",
