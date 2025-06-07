@@ -69,15 +69,14 @@ export const breachData: BreachData[] = [
     affectedUsers: Affected.ALL_REGISTERED,
     questions: ["Have you registered in the RTL app to view bus routes provided by MTCC?"],
     dataTypes: [
-      "Payment card details",
+      "Partial Payment card details",
       "Email addresses",
       "Mobile numbers",
       "Full names",
       "Date of birth",
       "National ID numbers",
     ],
-    description:
-      "Data exposure vulnerability revealed comprehensive customer records including personal identification details, contact information, and sensitive payment card data. Customer database contained unprotected access to names, birth dates, phone numbers, email addresses, and partial credit card numbers. Vulnerability was remediated within 24 hours of responsible disclosure, though the duration of initial exposure remains undetermined.",
+    description: "A data exposure vulnerability revealed comprehensive customer records including personal identification details, contact information, and partial card numbers. The vulnerability was remediated within 24 hours of responsible disclosure, though the duration of initial exposure remains undetermined."    
     severity: Severity.CRITICAL,
   },
   {
@@ -132,7 +131,7 @@ export const breachData: BreachData[] = [
     discoveredDate: null,
     patchedDate: "2023",
     affectedUsers: Affected.ALL_REGISTERED,
-    questions: ["Have you registered for the loyalty program in Family Room, AST, Coffee Shrub, Seahouse, Broista, or any other Purple Lane registered business?"],
+    questions: ["Have you registered for the loyalty program Purple Lane?"],
     dataTypes: [
       "User IDs",
       "Names",
