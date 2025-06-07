@@ -3,6 +3,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   basePath: '/haveibeenpwnedmv',
+  assetPrefix: '/haveibeenpwnedmv',
   images: {
     unoptimized: true
   },
