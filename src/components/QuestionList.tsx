@@ -32,6 +32,7 @@ export function QuestionList() {
                 {i !== questions.length - 1 && <Separator className="my-3" />}
                 <div className="flex items-center gap-2 max-w-[fit-content]">
                   <Switch
+                    className="data-[state=checked]:bg-green-500"
                     id={`question-${i}`}
                     checked={isEveryone ? true : !!selectedQuestions[i]}
                     onCheckedChange={() => !isEveryone && toggleQuestion(question)}
