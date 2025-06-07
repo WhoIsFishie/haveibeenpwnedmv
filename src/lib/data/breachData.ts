@@ -56,7 +56,7 @@ export const breachData: BreachData[] = [
       "Contract IDs",
     ],
     description:
-      "Vulnerability in pension management system exposed sensitive employee data including personal identifiers, salary details, contribution rates, and employment history. Despite promises of bug bounty compensation, payment was never provided to the reporting researcher. Organization allegedly made threats regarding public disclosure of the vulnerability. Duration of exposure remains unknown due to insufficient logging and monitoring.",
+      "Vulnerability in pension management system exposed sensitive employee data including personal identifiers, salary details, contribution rates, and employment history. Despite promises of bug bounty compensation, payment was never provided to the reporting researcher. Organization allegedly made threats regarding public disclosure of the vulnerability. Duration of exposure remains unknown due to lack of transparency.",
     severity: Severity.HIGH,
   },
   {
