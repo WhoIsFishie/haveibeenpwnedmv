@@ -22,7 +22,7 @@ export function BreachCard({ breach }: BreachCardProps) {
   const patchedDate = formatDate(breach.patchedDate);
 
   const formatAffectedUsers = (users: Affected) => {
-    const prefix = `Affect${patchedDate ? "ed" : "s"} `;
+    const prefix = `Affect${breach.patchedDate ? "ed" : "s"} `;
     switch (users) {
       case "unknown":
         return "Scope of Breach Unknown"
