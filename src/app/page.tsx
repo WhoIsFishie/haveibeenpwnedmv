@@ -7,18 +7,30 @@ import { breachData } from "@/lib/data/breachData";
 import { useEffect, useState } from "react";
 import { GithubIcon, TwitterIcon } from "lucide-react";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import {
+  Card,
+  CardAction,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
 export default function Home() {
   const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const isAtBottom = window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 100;
+      const isAtBottom =
+        window.innerHeight + window.scrollY >=
+        document.documentElement.scrollHeight - 100;
       setShowFooter(isAtBottom);
     };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
@@ -30,26 +42,32 @@ export default function Home() {
             <BreachList />
           </div>
         </div>
-        <footer 
+        <footer
           className={`fixed bottom-0 left-0 right-0 p-4 text-center transition-opacity duration-300 ${
-            showFooter ? 'opacity-100' : 'opacity-0 pointer-events-none'
+            showFooter ? "opacity-100" : "opacity-0 pointer-events-none"
           }`}
         >
+          <div>
+            <Card>
+              <CardHeader>Want to bring a stop?</CardHeader>
+              <Link href="https://www.change.org/p/protect-our-data-demand-a-data-protection-law-in-the-maldives-now"><Button>Sign The Petiton</Button></Link>
+            </Card>
+          </div>
           <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
             <p>Made with 💖 by FlameXode</p>
             <Separator orientation="vertical" className="h-4" />
-            <a 
-              href="https://github.com/WhoIsFishie/haveibeenpwnedmv" 
-              target="_blank" 
+            <a
+              href="https://github.com/WhoIsFishie/haveibeenpwnedmv"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
             >
               <GithubIcon className="h-5 w-5" />
             </a>
             <Separator orientation="vertical" className="h-4" />
-            <a 
-              href="https://x.com/WhoIsFishie/" 
-              target="_blank" 
+            <a
+              href="https://x.com/WhoIsFishie/"
+              target="_blank"
               rel="noopener noreferrer"
               className="hover:text-foreground transition-colors"
             >
