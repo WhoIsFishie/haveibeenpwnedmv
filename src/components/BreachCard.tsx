@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { BreachData } from "@/lib/types";
+import { Affected, BreachData } from "@/lib/types";
 import { severityColor } from "@/lib/utils";
 import { ChevronRight, Calendar } from "lucide-react";
 import Image from "next/image";
@@ -21,9 +21,29 @@ export function BreachCard({ breach }: BreachCardProps) {
   const discoveredDate = formatDate(breach.discoveredDate);
   const patchedDate = formatDate(breach.patchedDate);
 
+  const formatAffectedUsers = (users: Affected) => {
+    const prefix = `Affect${patchedDate ? "ed" : "s"} `;
+    switch (users) {
+      case "unknown":
+        return "Scope of Breach Unknown"
+      case "everyone":
+        return prefix + "all Maldivians";
+      case "registered":
+        return prefix + "all registered users";
+    }
+    return prefix + users;
+  };
+
+
+  const affectedUsers = formatAffectedUsers(breach.affectedUsers);
+
   return (
     <Card
-      className="p-4 relative"
+      className={`p-4 relative outline-2 outline-offset-2 ${
+            breach.patchedDate 
+              ? 'outline-green-500/40'
+              : 'outline-red-500/40'
+          }`}
       style={{
         backgroundImage: `url(${breach.logo})`,
         backgroundSize: "cover",
@@ -33,25 +53,25 @@ export function BreachCard({ breach }: BreachCardProps) {
         backgroundRepeat: "no-repeat",
       }}
     >
-      <div className="absolute top-0 right-0 flex">
-        <Badge 
-          className={`capitalize backdrop-blur-sm font-medium px-3 py-1.5 rounded-none rounded-bl-md ${
-            breach.patchedDate 
-              ? 'bg-green-500/40 text-green-100' 
-              : 'bg-red-500/40 text-red-100'
-          }`}
-        >
-          {breach.patchedDate ? `Patched ${breach.patchedDate}` : 'Not Patched'}
-        </Badge>
+      <div className="absolute top-[-5] right-[-5] flex">
         <Badge 
           className={`capitalize ${
             breach.severity === 'critical' ? 'bg-red-500/40 text-red-100' :
             breach.severity === 'high' ? 'bg-orange-500/40 text-orange-100' :
             breach.severity === 'medium' ? 'bg-yellow-500/40 text-yellow-100' :
             'bg-green-500/40 text-green-100'
-          } backdrop-blur-sm font-medium px-3 py-1.5 rounded-none rounded-tr-md`}
+          } backdrop-blur-sm font-medium px-3 py-1.5 rounded-none rounded-bl-lg`}
         >
           {breach.severity}
+        </Badge>
+        <Badge 
+          className={`capitalize backdrop-blur-sm font-medium px-3 py-1.5 rounded-none rounded-tr-lg ${
+            breach.patchedDate 
+              ? 'bg-green-500/40 text-green-100' 
+              : 'bg-red-500/40 text-red-100'
+          }`}
+        >
+          {breach.patchedDate ? `Patched ${breach.patchedDate}` : 'Not Patched'}
         </Badge>
       </div>
       <CardHeader>
@@ -98,11 +118,9 @@ export function BreachCard({ breach }: BreachCardProps) {
       </CardHeader>
       <CardContent>
         <div className="space-y-2">
-          {breach.affectedUsers && (
-            <p>
-              Affect{breach.patchedDate ? "ed" : "s"} {breach.affectedUsers}
-            </p>
-          )}
+          <p>
+            {affectedUsers}
+          </p>
           <div>
             {/* <p className="font-semibold mb-2">Data Types:</p> */}
             <div className="flex flex-wrap gap-2">
