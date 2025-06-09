@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import { PetitionBanner } from "@/components/PetitionBanner";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,7 +42,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-          {children}
+          <PetitionBanner />
+          <main className="sm:pt-0 pt-[72px]">
+            {children}
+          </main>
         </ThemeProvider>
       </body>
     </html>

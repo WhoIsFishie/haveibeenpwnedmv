@@ -24,7 +24,7 @@ export function QuestionList() {
         <CardAction>😱</CardAction>
       </CardHeader>
       <CardContent className="h-full">
-        <div className="flex flex-col-reverse sticky top-5">
+        <div className="flex flex-col-reverse sticky top-18">
           {questions.sort(q => isEveryoneQuestion(q) ? 1 : 0).map((question, i) => {
             const isEveryone = isEveryoneQuestion(question);
             return (
