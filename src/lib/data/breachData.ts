@@ -135,7 +135,7 @@ export const breachData: BreachData[] = [
     dataTypes: [
       "User IDs",
       "Names",
-      "Mobile numbers", 
+      "Mobile numbers",
       "Email addresses",
       "Date of birth",
       "Gender",
@@ -165,6 +165,33 @@ export const breachData: BreachData[] = [
     ],
     description:
       "OTP authentication bypass vulnerability in government customs portal allowed unauthorized access to citizen personal data including national identification numbers, birth dates, full names, and residential addresses. The security flaw enabled users to retrieve other citizens' sensitive information through manipulated authentication requests. Despite the breach affecting a government system containing critical identity data, authorities have declined to publicly acknowledge the incident or provide transparency regarding the scope of exposure.",
+    severity: Severity.CRITICAL,
+  },
+  {
+    id: "maldives-customs2",
+    logo: "/haveibeenpwnedmv/logos/customs.jpg",
+    service: "Maldives Customs",
+    questions: ["Have you ever had to declare imports at Customs?"],
+    category: "Government",
+    discoveredDate: null,
+    patchedDate: "2025",
+    affectedUsers: Affected.ALL_REGISTERED,
+    dataTypes: [
+      "Passport numbers",
+      "Date of birth",
+      "Names",
+      "Nationality",
+      "Country of Residence",
+      "Email",
+      "Phone",
+      "Occupation",
+      "Flight Number",
+      "Date & Time of Arrival/Departure"
+      "Addresses",
+      "Invoice Total",
+    ],
+    description:
+      "System error in customs cash declaration processing exposed sensitive traveler information including passport details, personal identification data, travel itineraries, and financial declaration amounts. The vulnerability revealed comprehensive passenger profiles containing immigration status, contact information, occupational details, and declared monetary values for individuals entering and exiting the Maldives. This breach compromised both citizen and foreign national data processed through official government customs channels. Bug was rushed to get patched after disclosure.",
     severity: Severity.CRITICAL,
   },
   {
