@@ -209,4 +209,18 @@ export const breachData: BreachData[] = [
       "Bill payment feature on telecommunications provider website exposes customer personal information without proper authentication. The system reveals subscriber names and current addresses when only a phone number is provided, bypassing standard verification procedures. This design flaw allows unauthorized individuals to harvest customer data by systematically querying phone numbers through the payment portal interface.",
     severity: Severity.HIGH,
   },
+  {
+    id: "tth-image",
+    logo: "/haveibeenpwnedmv/logos/tth.jpg",
+    service: "Tree Top Hospital",
+    category: "Health",
+    discoveredDate: null,
+    patchedDate: 2023,
+    affectedUsers: Affected.ALL_REGISTERED,
+    questions: ["Did you ever visit Tree Top Hospital?"],
+    dataTypes: ["ID Card Image"],
+    description:
+      "Unsecured API endpoint exposed patient identification card images without authentication controls. The vulnerability was discovered by security researcher PeeP and gained public attention after being shared on Twitter, prompting widespread concern about healthcare data security practices. Hospital administration responded rapidly to patch the vulnerability following the social media disclosure",
+    severity: Severity.HIGH,
+  },
 ]; 
