@@ -186,7 +186,7 @@ export const breachData: BreachData[] = [
       "Phone",
       "Occupation",
       "Flight Number",
-      "Date & Time of Arrival/Departure"
+      "Date & Time of Arrival/Departure",
       "Addresses",
       "Invoice Total",
     ],
