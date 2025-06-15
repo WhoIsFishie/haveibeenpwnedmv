@@ -2,6 +2,11 @@
 
 This lightweight, browser-based tool helps users in the Maldives understand whether platforms they rely on have had known bugs and when those bugs were patched.
 
+## Todo
+
+- create link preview
+- add dhiv lang and rtl support
+
 ## Features
 
 - Clean, responsive interface for breach checking
