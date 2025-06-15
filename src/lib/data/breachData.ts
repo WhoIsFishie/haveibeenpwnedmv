@@ -19,7 +19,7 @@ export const breachData: BreachData[] = [
     ],
     description:
       "Critical security vulnerabilities expose user data through inadequate server authentication and missing SSL encryption. Personal information including phone numbers, addresses, names, and location data remains accessible without proper security controls. Vulnerability has persisted unaddressed since initial disclosure in 2023.",
-    severity: Severity.HIGH,
+    severity: Severity.CRITICAL,
   },
   {
     id: "foodies-app",
@@ -85,7 +85,7 @@ export const breachData: BreachData[] = [
     service: "Amana Takaful",
     category: "Finance",
     discoveredDate: null,
-    patchedDate: null,
+    patchedDate: 2025,
     questions: ["Did you get your motorcycle from Sheesha?", "Have you registered for the Amana Takaful insurance?"],
     affectedUsers: Affected.UNKNOWN,
     dataTypes: [
@@ -95,7 +95,7 @@ export const breachData: BreachData[] = [
       "National ID numbers",
     ],
     description:
-      "Ongoing security vulnerability exposes customer personal data including national identification numbers, contact details, vehicle registration information, and full names. The system remains unknown with no timeline provided for remediation. Duration of exposure isnull leaving customers at continued risk of identity theft and privacy violations.",
+      "Ongoing security vulnerability exposes customer personal data including national identification numbers, contact details, vehicle registration information, and full names. The system remains unknown with no timeline provided for remediation. Duration of exposure is unknown. Patched after Fishie tweeted. now it only shows owner name.",
     severity: Severity.HIGH,
   },
   {
@@ -228,12 +228,12 @@ export const breachData: BreachData[] = [
     service: "MediaNet",
     category: "Entertainment",
     discoveredDate: null,
-    patchedDate: null,
+    patchedDate: 2025,
     affectedUsers: Affected.ALL_REGISTERED,
     questions: ["Do you use MediaNet for TV?"],
     dataTypes: ["Phone numbers", "Names", "Current addresses"],
     description:
-      "Bill payment feature on telecommunications provider website exposes customer personal information without proper authentication. The system reveals subscriber names and current addresses when only a phone number is provided, bypassing standard verification procedures. This design flaw allows unauthorized individuals to harvest customer data by systematically querying phone numbers through the payment portal interface.",
+      "Bill payment feature on telecommunications provider website exposes customer personal information without proper authentication. The system reveals subscriber names and current addresses when only a phone number is provided, bypassing standard verification procedures. This design flaw allows unauthorized individuals to harvest customer data by systematically querying phone numbers through the payment portal interface. Patched after Fishie went publick on twitter. now it only shows name.",
     severity: Severity.HIGH,
   },
   {
@@ -248,6 +248,6 @@ export const breachData: BreachData[] = [
     dataTypes: ["ID Card Image"],
     description:
       "Unsecured API endpoint exposed patient identification card images without authentication controls. The vulnerability was discovered by security researcher PeeP and gained public attention after being shared on Twitter, prompting widespread concern about healthcare data security practices. Hospital administration responded rapidly to patch the vulnerability following the social media disclosure",
-    severity: Severity.HIGH,
+    severity: Severity.CRITICAL,
   },
 ]; 
