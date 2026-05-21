@@ -85,7 +85,7 @@ export const breachData: BreachData[] = [
     service: "Amana Takaful",
     category: "Finance",
     discoveredDate: null,
-    patchedDate: 2025,
+    patchedDate: "2025",
     questions: ["Did you get your motorcycle from Sheesha?", "Have you registered for the Amana Takaful insurance?"],
     affectedUsers: Affected.UNKNOWN,
     dataTypes: [
@@ -292,4 +292,27 @@ export const breachData: BreachData[] = [
       "a publicly exposed git repo lead to creds leaking which exposed the DB to the public. all details stored in the DB was available to the internet.",
     severity: Severity.CRITICAL,
   },
+  // {
+  //   id: "eee_zap",
+  //   logo: "/haveibeenpwnedmv/logos/eeezap.jpg",
+  //   service: "Eeezap",
+  //   category: "Food Delivery",
+  //   discoveredDate: "2026",
+  //   patchedDate: "2026",
+  //   affectedUsers: Affected.ALL_REGISTERED,
+  //   questions: ["Have you ordered food from Eeezap?"],
+  //   dataTypes: [
+  //     "Phone numbers",
+  //     "Email",
+  //     "Addresses",
+  //     "Name",
+  //     "Messeges",
+  //     "Password Hash",
+  //     "Geo-Locations",
+  //     "User Order History",
+  //   ],
+  //   description:
+  //     "",
+  //   severity: Severity.CRITICAL,
+  // },
 ]; 
